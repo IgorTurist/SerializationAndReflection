@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><PeopleXml><Object name="innopolis.igor.People"><field name="name" type="java.lang.String" value="Anna"/><field name="age" type="int" value="24"/><field name="salary" type="double" value="1000000.0"/></Object></PeopleXml>
