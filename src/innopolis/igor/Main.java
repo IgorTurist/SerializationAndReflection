@@ -18,7 +18,7 @@ public class Main {
 //        People people2 = (People)MyXml.loadPeopleFromXml("file.xml");
 //        System.out.println(people2);
 
-        saveUrl("./People.jar","https://github.com/IgorTurist/SerializationAndReflection/blob/master/src/innopolis/People.jar");
+//        saveUrl("./People.jar","https://github.com/IgorTurist/SerializationAndReflection/blob/master/src/innopolis/People.jar");
         JarClassLoader loader = new JarClassLoader();
         Class class_obj = null;
         try {
@@ -30,10 +30,21 @@ public class Main {
         catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        if(class_obj != null)
-            System.out.println(class_obj.getName());
-        else
+        if(class_obj == null) {
             System.out.println("Program can't get class People from class loader");
+            return;
+        }
+
+        Object obj = null;
+        try {
+            obj = class_obj.newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        MyXml.savePeopleToXml(obj);
     }
 
     public static void saveUrl(final String filename, final String urlString){

@@ -37,7 +37,7 @@ public class JarClassLoader extends ClassLoader {
 
         try {
             JarFile jar = new JarFile(jarFile);
-            JarEntry entry = jar.getJarEntry(className + ".class");
+            JarEntry entry = jar.getJarEntry(className.toLowerCase() + ".class");
             InputStream is = jar.getInputStream(entry);
             ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
             int nextValue = is.read();
@@ -47,7 +47,7 @@ public class JarClassLoader extends ClassLoader {
             }
 
             classByte = byteStream.toByteArray();
-            result = defineClass(className, classByte, 0, classByte.length, null);
+            result = defineClass("innopolis.igor." + className, classByte, 0, classByte.length, null);
             classes.put(className, result);
             return result;
         } catch (Exception e) {

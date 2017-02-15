@@ -19,8 +19,8 @@ import javax.xml.transform.stream.StreamResult;
 public class MyXml {
     public static void savePeopleToXml(Object obj){
         try{
-            if(!(obj instanceof People))
-                throw new Exception("Wrong object type");
+//            if(!(obj instanceof People))
+//                throw new Exception("Wrong object type");
 
             Class obj_class = obj.getClass();
             Field[] fields = obj_class.getDeclaredFields();
