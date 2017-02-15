@@ -38,12 +38,10 @@ public class MyXml {
 
             for(Field field: fields){
                 field.setAccessible(true);
-
                 Element element = doc.createElement("field");
                 element.setAttribute("type",field.getType().getName());
                 element.setAttribute("name",field.getName());
                 element.setAttribute("value",field.get(obj).toString());
-
                 obj_element.appendChild(element);
             }
 // save to the file

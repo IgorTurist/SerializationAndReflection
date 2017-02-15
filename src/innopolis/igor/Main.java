@@ -20,9 +20,10 @@ public class Main {
 
 //        saveUrl("./People.jar","https://github.com/IgorTurist/SerializationAndReflection/blob/master/src/innopolis/People.jar");
         JarClassLoader loader = new JarClassLoader();
-        Class class_obj = null;
+        loader.setJarFile("c:\\Users\\igor\\IdeaProjects\\SerializationAndReflection\\out\\artifacts\\Animal.jar");
+        Class<?> class_obj = null;
         try {
-            class_obj = loader.loadClass("People");
+            class_obj = loader.loadClass("Animal");
         }
         catch(ClassNotFoundException ex) {
             System.out.println(ex.getMessage());

@@ -21,7 +21,10 @@ public class People implements Serializable{
     }
 
     public People(){
-
+System.out.println("People()");
+        this.name = "";
+        this.age = 0;
+        this.salary = 0;
     }
 
     public String getName() {
