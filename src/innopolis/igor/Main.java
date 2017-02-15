@@ -18,7 +18,7 @@ public class Main {
 //        People people2 = (People)MyXml.loadPeopleFromXml("file.xml");
 //        System.out.println(people2);
 
-//        saveUrl("./People.jar","https://github.com/IgorTurist/SerializationAndReflection/blob/master/src/innopolis/People.jar");
+        saveUrl("./Animal.jar","https://github.com/IgorTurist/SerializationAndReflection/blob/master/out/artifacts/Animal.jar");
         JarClassLoader loader = new JarClassLoader();
         loader.setJarFile("c:\\Users\\igor\\IdeaProjects\\SerializationAndReflection\\out\\artifacts\\Animal.jar");
         Class<?> class_obj = null;

@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><PeopleXml><Object name="innopolis.igor.Animal"><field name="weight" type="int" value="0"/><field name="name" type="java.lang.String" value=""/><field name="speed" type="double" value="0.0"/></Object></PeopleXml>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><PeopleXml><Object name="innopolis.igor.Animal"><field name="weight" type="int" value="10"/><field name="speed" type="double" value="10.0"/><field name="name" type="java.lang.String" value="Бурундук"/></Object></PeopleXml>
